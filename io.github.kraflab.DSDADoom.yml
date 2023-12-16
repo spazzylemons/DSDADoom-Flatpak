@@ -1,0 +1,56 @@
+id: io.github.kraflab.DSDADoom
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+command: dsda-doom
+modules:
+- name: libzip
+  buildsystem: cmake
+  config-opts:
+  - -DCMAKE_BUILD_TYPE=Release
+  sources:
+  - type: git
+    url: https://github.com/nih-at/libzip
+    tag: v1.10.1
+- name: glu
+  buildsystem: meson
+  config-opts:
+  - --buildtype=release
+  sources:
+  - type: git
+    url: https://gitlab.freedesktop.org/mesa/glu
+    tag: glu-9.0.3
+- name: fluidsynth
+  buildsystem: cmake
+  config-opts:
+  - -DCMAKE_BUILD_TYPE=Release
+  sources:
+  - type: git
+    url: https://github.com/FluidSynth/fluidsynth
+    tag: v2.3.4
+- name: dsda-doom
+  buildsystem: cmake
+  subdir: prboom2
+  config-opts:
+  - -DCMAKE_BUILD_TYPE=Release
+  sources:
+  - type: git
+    # TODO replace with upstream, and uncomment tag
+    url: https://github.com/spazzylemons/dsda-doom
+    # tag: v0.27.6
+- name: desktop
+  buildsystem: simple
+  sources:
+  - type: file
+    path: io.github.kraflab.DSDADoom.desktop
+  - type: file
+    path: io.github.kraflab.DSDADoom.png
+  build-commands:
+  - install -Dm 644 io.github.kraflab.DSDADoom.png -t /app/share/icons
+  - install -Dm 644 io.github.kraflab.DSDADoom.desktop -t /app/share/applications
+finish-args:
+- --device=all
+- --share=ipc
+- --socket=x11
+- --socket=wayland
+- --socket=pulseaudio
