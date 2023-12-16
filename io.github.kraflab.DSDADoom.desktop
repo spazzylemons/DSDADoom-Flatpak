@@ -2,7 +2,7 @@
 Type=Application
 Name=DSDA-Doom
 Comment=enhanced clone of the classic first-person shooter Doom
-Icon=dsda-doom
+Icon=io.github.kraflab.DSDADoom
 TryExec=dsda-doom
 Exec=dsda-doom %F
 Categories=Game;ActionGame;
