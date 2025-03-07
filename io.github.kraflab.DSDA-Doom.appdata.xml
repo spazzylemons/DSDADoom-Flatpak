@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2023 Ryan Krafnick -->
 <component type="desktop">
-    <id>io.github.kraflab.DSDADoom</id>
+    <id>io.github.kraflab.DSDA-Doom</id>
     <name>DSDA-Doom</name>
     <summary>Enhanced Doom source port</summary>
     <metadata_license>CC0-1.0</metadata_license>
@@ -11,7 +11,7 @@
     <url type="homepage">https://github.com/kraflab/dsda-doom</url>
     <url type="bugtracker">https://github.com/kraflab/dsda-doom/issues</url>
 
-    <launchable type="desktop-id">io.github.kraflab.DSDADoom.desktop</launchable>
+    <launchable type="desktop-id">io.github.kraflab.DSDA-Doom.desktop</launchable>
     <description>
         <p>
             This is a successor of prboom+ with many new features, including:
