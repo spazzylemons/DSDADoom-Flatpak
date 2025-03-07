@@ -35,9 +35,8 @@ modules:
   - -DCMAKE_BUILD_TYPE=Release
   sources:
   - type: git
-    # TODO replace with upstream, and uncomment tag
-    url: https://github.com/spazzylemons/dsda-doom
-    # tag: v0.27.6
+    url: https://github.com/kraflab/dsda-doom
+    tag: v0.28.3
 - name: desktop
   buildsystem: simple
   sources:

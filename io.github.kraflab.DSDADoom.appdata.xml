@@ -28,12 +28,6 @@
             <li>Advanced tools for TASing</li>
             <li>Rewind</li>
         </ul>
-
-        <p>
-            WADs, saves, and configuration files are stored in
-            ~/.var/.app/io.github.kraflab.DSDADoom/data/.dsda-doom as to not
-            require filesystem access.
-        </p>
     </description>
 
     <screenshots>
@@ -52,8 +46,7 @@
     </screenshots>
 
     <releases>
-        <!-- TODO set release date when v0.27.6 is published -->
-        <release version="0.27.6" date="2023-12-16">
+        <release version="0.28.3" date="2025-01-17">
             <description>
                 <p>First release to be published on Flatpak</p>
             </description>
